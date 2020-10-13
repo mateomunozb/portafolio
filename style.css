@@ -8,36 +8,32 @@ body {
   margin: auto;
   font-family: 'Anton', sans-serif;
   font-size: 18px;
-  background-color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23fff000' fill-opacity='0.1'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-.body-background {
-  background: url('/images/fondo.jpg') no-repeat center center/cover;
+  background: url('/images/fondo.jpg') no-repeat fixed center center/cover;
 }
 
 .nav-menu {
-  background: rgb(220, 220, 220);
+  position: fixed;
+  background: rgb(220, 220, 220, 0.6);
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.nav-menu ul {
-  list-style: none;
-  display: flex;
-  padding: 0 80px;
+  width: 100%;
 }
 
 .nav-menu h3 {
-  flex: 1;
-  padding: 10px;
+  padding: 10px 80px;
   font-family: 'Lobster Two', cursive;
   font-size: 30px;
 }
 
 .nav-menu h3 a {
   text-decoration: none;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  padding: 0 80px;
 }
 
 .nav-menu ul li a {
@@ -52,13 +48,14 @@ body {
 
 .intro {
   font-family: 'Lobster Two', cursive;
-  font-size: 50px;
+  font-size: 60px;
   width: 100%;
-  height: 550px;
+  height: 760px;
   color: white;
   display: flex;
   justify-content: flex-end;
-  padding: 0 0 50px 0;
+  align-items: center;
+  padding: 60px 0;
 }
 
 .intro p {
@@ -67,12 +64,177 @@ body {
 
 .intro p span {
   font-family: 'Bungee Shade', cursive;
-  font-size: 60px;
+  font-size: 80px;
   color: yellow;
 }
 
-.intro p i {
-  color: yellow;
+#aboutme {
+  padding: 50px 0;
+  background: rgba(245, 245, 245, 0.3);
+}
+
+.header {
+  padding: 20px 0 0 0;
+  display: flex;
+}
+
+.header h1 {
+  text-align: center;
+  background: yellow;
+  padding: 10px;
+  border-radius: 3px;
+  margin: auto;
+}
+
+.aboutme {
+  padding: 10px 0;
+  display: flex;
+}
+
+.aboutme img {
+  width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.aboutme p {
+  margin: auto;
+  padding: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  text-align: justify;
+}
+
+#skills {
+  padding: 50px 0;
+}
+
+.skills {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills .card {
+  width: 250px;
+  margin: 25px;
+  background: linear-gradient(0deg, #383838, #585858, #383838);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 4px;
+  text-align: center;
+  align-items: center;
+}
+
+.skills .card h3 {
+  background: yellow;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.skills .card i {
+  color: white;
+  padding: 10px;
+  font-size: 35px;
+}
+
+.skills .card i {
+  padding: 10px;
+}
+
+#curriculum {
+  padding: 50px 0;
+  /* background: white; */
+  background: linear-gradient(
+    0deg,
+    rgba(56, 56, 56, 0.9),
+    rgba(88, 88, 88, 0.9),
+    rgba(56, 56, 56, 0.9)
+  );
+}
+
+.curriculum {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+.title {
+  display: flex;
+}
+
+.title h3 {
+  background: yellow;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.title .divider {
+  width: 75%;
+  border-top: 10px solid yellow;
+  margin: auto;
+}
+
+.exp {
+  padding: 10px 0;
+  color: #ffffff;
+}
+
+.exp h6 span {
+  background: yellow;
+  border-radius: 3px;
+  padding: 3px;
+  color: #000000;
+}
+
+.exp ul {
+  /* color: white; */
+  margin-left: 50px;
+  font-size: 15px;
+  padding-top: 5px;
+}
+
+.buttom {
+  display: flex;
+  padding: 15px 0;
+  justify-content: center;
+}
+
+.buttom .btn {
+  cursor: pointer;
+  border: 0;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: yellow;
+  border-radius: 3px;
+  color: black;
+  font-size: 15px;
+}
+
+#projects {
+  padding: 50px 0;
+}
+
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.projects img {
+  padding: 25px;
+  width: 300px;
+  height: 200px;
+  opacity: 0.7;
+}
+
+.projects img:hover {
+  opacity: 1;
 }
 
 .phrase {
@@ -96,154 +258,9 @@ body {
   color: black;
 }
 
-.social a:hover {
-  font-size: 50px;
-}
-
-.bodypage {
-  margin: 100px auto;
-  background: rgba(245, 245, 245, 0.3);
-}
-
-.header {
-  padding: 10px 0;
-  display: flex;
-}
-
-.bodypage h3 {
-  font-size: 25px;
-  text-align: center;
-  background: yellow;
-  padding: 10px;
-  border-radius: 3px;
-  margin: auto;
-}
-
-.bodypage .divider {
-  width: 75%;
-  border-top: 10px solid yellow;
-  margin: auto;
-}
-
-.content {
-  padding: 10px 0;
-  display: flex;
-}
-
-.content img {
-  width: 600px;
-  margin: auto;
-  padding: 20px;
-}
-
-.content p {
-  margin: auto;
-  padding: 10px;
-  font-family: 'Lobster Two', cursive;
-  font-size: 30px;
-}
-
-.contain {
-  margin: auto;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.contain .card {
-  position: relative;
-  margin: 10px;
-  width: 250px;
-  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.percent {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  /* z-index: 1000; */
-}
-
-.percent .number {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.percent .number h2 {
-  color: #777;
-  font-weight: 700;
-  font-size: 40px;
-}
-
-.percent .number h2 span {
-  font-size: 24px;
-}
-
-.text {
-  position: relative;
-  color: #777;
-  margin-top: 20px;
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 1px;
-}
-
-svg {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  z-index: 1000;
-}
-
-svg circle {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: #191919;
-  stroke-width: 10;
-  stroke-linecap: round;
-  transform: translate(5px, 5px);
-}
-
-svg circle:nth-child(2) {
-  stroke-dasharray: 440;
-  stroke-dashoffset: 440;
-}
-
-.card:nth-child(1) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 90) / 100);
-  stroke: #00ff43;
-}
-
-.card:nth-child(2) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 90) / 100);
-  stroke: #00a1ff;
-}
-
-.card:nth-child(3) svg circle:nth-child(2) {
-  stroke: #ff04ff;
-}
-
-.card:nth-child(4) svg circle:nth-child(2) {
-  stroke: #ffc400;
-}
-
 a {
   color: #000000;
+  text-decoration: none;
 }
 
 a:visited {
@@ -251,6 +268,12 @@ a:visited {
 }
 
 .container {
-  width: 60%;
+  width: 80%;
   margin: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 98%;
+  }
 }
